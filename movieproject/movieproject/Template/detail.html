@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container-fluid">
+
+<h3 class="font-weight-bold">
+
+{{movie_list1.name}} ---
+{{movie_list1.year}}<br>
+    </h3>
+<img src="{{movie_list1.img.url}}" width="400" height="400"><br><br>
+<div class="p-3 mb-2 bg-secondary text-white">
+<h4><i>
+
+{{movie_list1.desc}}<br>
+    </i>
+    </h4>
+</div>
+
+
+<a class="btn btn-info" href="{% url 'movieapp:edit' movie_list1.id %}" role="button"> edit/update </a>
+
+</div>
+{% endblock %}

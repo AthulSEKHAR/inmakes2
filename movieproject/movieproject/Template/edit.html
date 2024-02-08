@@ -1,0 +1,17 @@
+
+{% extends 'base.html' %}
+{% block body %}
+<div class="container-fluid">
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+
+{{form.as_p}}
+
+
+<input type="submit"><br>
+    "If you want to delete"
+<a class="btn btn-outline-warning" href="{% url 'movieapp:delete' movie.id %}" role="button">-</a>
+</form>
+
+</div>
+{% endblock %}
